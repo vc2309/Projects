@@ -1,0 +1,14 @@
+<html>
+<head>
+<script>
+function send() {
+  console.log('popup.html: sending "modify" request');
+  chrome.tabs.getSelected(null, function(tab) {
+    chrome.tabs.sendRequest(tab.id, {action:'modify'}, function(response) {});
+  });
+  window.close();
+}
+</script>
+</head>
+<body><a href="#" onclick="send();">Click me...</a></body>
+</html>
