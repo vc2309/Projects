@@ -1,14 +1,4 @@
 
-
-// chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
-//  if (request.action == "getDOM"){
-//  	console.log("HYON");
-//    sendResponse({dom: "The dom that you want to get"});
-// }
-//  else{
-//    sendResponse({}); // Send nothing..
-// }
-// });
 // chrome.runtime.sendMessage($('h1').text());
 // chrome.runtime.onMessage.addListener(function(response,sender,sendResponse){
 //   // alert(response);
@@ -19,18 +9,18 @@
 
 
 chrome.extension.onMessage.addListener(function(msg, sender, sendResponse) {
-   
-      // alert(msg.action);
-      
+      var text=msg.action;
+      console.log(text);
+      var all=$("p:contains(text)");
+      for(var c in all){
+        // var cont=c.text().toLowerCase();
+        console.log($(c).children().length);
+        if($(c).children().length===0){
+          $(c).hide();
+        }
+      }
    
 });
-
-
-
-
-
-
-
 
 // chrome.runtime.onMessage.addListener(
 //   function(request, sender, sendResponse) {
