@@ -11,14 +11,15 @@
 chrome.extension.onMessage.addListener(function(msg, sender, sendResponse) {
       var text=msg.action;
       console.log(text);
-      var all=$("p:contains(text)");
-      for(var c in all){
+      var all=$(":contains('"+text+"')");
+      console.log($(all));
+      $.each(all,function(ind,val){
         // var cont=c.text().toLowerCase();
-        console.log($(c).children().length);
-        if($(c).children().length===0){
-          $(c).hide();
+        console.log($(val).children().length);
+        if($(val).children().length===0){
+          $(val).hide();
         }
-      }
+      });
    
 });
 
