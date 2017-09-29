@@ -58,6 +58,7 @@
 $(function(){
 	
 	$("#hi").click(function(){
+		setInterval(function(){
 	console.log("here");
 	var a=$("#inp").val();
 // $("body").click(function(){         
@@ -65,8 +66,28 @@ $(function(){
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
          chrome.tabs.sendMessage(tabs[0].id, {action: a}, function(response) {});  
       });
-   
+
+
+  },1000);
+
+
 });
+
+
+
+
+
+
+});
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) { 
+   var a=$("#inp").val(); 
+   if (changeInfo.status == 'complete') {
+   console.log("updated");   
+      chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+         chrome.tabs.sendMessage(tabs[0].id, {action: a}, function(response) {});  
+      });
+   }
 });
 
 // chrome.browserAction.onClicked.addListener(click);

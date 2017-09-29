@@ -6,27 +6,41 @@
 // });
 
 
-
+ var id=0;
 $.expr[":"].contains = $.expr.createPseudo(function(arg) {
     return function( elem ) {
         return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
     };
 });
+function modify(elem){
+  id=id+1;
+  $('<span><p style=color:yellow!important; background color:red!important; font-size:32px!important;>ALERT</p><span class="coming btn"><a id='+id+'class="yo">Let me see</a></span></span>').insertBefore(elem);
+  $(elem).hide();
+  $(elem).addClass("marked");
+}
 
 chrome.extension.onMessage.addListener(function(msg, sender, sendResponse) {
+      setInterval(function(){
       var text=msg.action;
-      console.log(text);
-      var all=$(":contains('"+text+"')");
-      console.log($(all));
-      $.each(all,function(ind,val){
-        // var cont=c.text().toLowerCase();
-        console.log($(val).children().length);
-        if(($(val).children().length===0) || $(val).prop("tagName")=="P" ){
-          $(val).hide();
-        }
-      });
+      if(text.length>2){
+            console.log(text);
+            var all=$(":contains('"+text+"')");
+            console.log($(all));
+            var list=["P","SPAN","LI"];
+            $.each(all,function(ind,val){
+              // var cont=c.text().toLowerCase();
+              console.log($(val).children().length);
+              if(($(val).children().length===0) || list.indexOf($(val).prop("tagName"))>-1 ){
+                if($(this).hasClass("marked")==false){
+                modify($(this));}
+              }
+            });
+          }
+        },1000);
    
 });
+
+
 
 // chrome.runtime.onMessage.addListener(
 //   function(request, sender, sendResponse) {
