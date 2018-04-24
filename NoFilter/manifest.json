@@ -8,12 +8,13 @@
         "default_popup": "index.html"
     },
     "background": {
-    "scripts": ["background.js"]
-},   
+    "scripts": ["check.js"],
+    "persistent": false
+  },   
     "content_scripts": [{
         "matches": [ "http://*/*", "https://*/*" ],  
         "js": [ "jquery.min.js", "main.js"]
 
 }],
-"permissions": ["activeTab"]
+"permissions": ["activeTab","storage","notifications","webNavigation"]
 }
