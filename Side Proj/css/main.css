@@ -1,4 +1,7 @@
-@import 'normalize.css';
+/*@import 'normalize.css';*/
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Quicksand|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Zilla+Slab+Highlight');
+
 .flex {
   display: -webkit-flex;
   display: -moz-flex;
@@ -42,7 +45,7 @@ html,
 body {
   width: 100%;
   margin: 0;
-  /*min-height: 100%;*/
+  min-height: 100%;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
 }
@@ -107,25 +110,20 @@ h2 {
   opacity: 0.8;
   filter: opacity(80);
 }
-.frame .coming .wrapper {
+.coming .wrapper {
   color: #57bdcb;
-  margin: 10px;
 }
-.frame h1 {
-  text-align: center;
-  font-size: 48px;
-  font-weight: ;
-  /*margin-top: 150px;*/
-  color: white!important;
+.coming .wrapper h1 {
+  font-size: 72px;
+  font-weight: bold;
+  margin-top: 150px;
+  color: #57bdcb;
 }
 .coming .wrapper h3 {
   text-align: center;
-  font-weight: 100;
-
 }
 .coming .textfield {
   padding: 5px;
-  margin: 10px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -135,34 +133,25 @@ h2 {
 }
 .coming .textfield .search-box {
   color: #000;
-  background-color: inherit!important;
   position: relative;
-  /*width: 650px;*/
-  font-size: 16px;
+  width: 650px;
+  font-size: 20px;
   border: none;
-  font-style: italic;
-
 }
 .coming .textfield .search-box-cont {
   height: 300px;
 }
 .coming .btn {
-  position: absolute;
-  width: 220px;
+  max-width: 220px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 10px;
-  margin: 10px 0px 0px 30px ;
-  background-color: #ccc;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin: 0 auto 150px;
 }
-
 .coming .btn a {
-  font-family: 'Roboto', sans-serif;
   display: block;
   text-align: center;
-  font-size: 16px;
-  color: black!important;
-  font-weight: 100;
+  font-size: 20px;
 }
 @media (max-width: 550px) {
   .coming {
@@ -170,11 +159,6 @@ h2 {
   }
   .coming .textfield .search-box {
     max-width: 350px;
-  }
-
-  .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p{
-  line-height: 1.5em!important;
-  margin: 50px 0 0!important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -287,13 +271,6 @@ footer > span {
     color: #959595;
     font-size: 16px;
   }
-  html body section div h1 {
-  display: block;
-  margin: 50px 0 40px!important;
-  text-align: center;
-  font-weight: 100;
-  letter-spacing: 0;
-}
 }
 iframe {
   width: 100%;
@@ -304,7 +281,7 @@ iframe {
 }
 html body section div h1 {
   display: block;
-  margin: 0px 0 40px;
+  margin: 150px 0 40px;
   text-align: center;
   font-weight: 100;
   letter-spacing: 0;
@@ -518,18 +495,8 @@ header > div a.inversed {
   margin: 20px 0 0;
   color: black;
   text-transform: none;
-  font-size: 35px;
+  font-size: 65px;
   letter-spacing: 6px;
-}
-@media(max-width: 400px){
-  .landing-page h1 {
-  text-align: center;
-  margin: 0px;
-  color: black;
-  text-transform: none;
-  font-size: 35px;
-  letter-spacing: 6px;
-}
 }
 .landing-page .landing-content {
   width: 100%;
@@ -567,27 +534,6 @@ header > div a.inversed {
   font-weight: 100;
   font-size: 50px;
   margin-top: 20px;
-}
-@media(max-width: 700px){
-  .landing-page .landing-content h2 {
-  color: #FFF;
-  display: block;
-  text-align: center;
-  text-shadow: 3px 3px 1px #397b84;
-  letter-spacing: 3px;
-  font-weight: 100;
-  font-size: 50px;
-  margin-top:60px!important;
-  margin-bottom: 0px!important;
-}
-.landing-page .landing-content {
-  width: 100%;
-  height: 100%;
-  min-height: 700px;
-  position: relative;
-  padding: 0px;
-  background: #57bdcb;
-}
 }
 .landing-page .landing-content a {
   padding: 10px 25px;
@@ -867,20 +813,6 @@ body.start .search-section .search-history {
   flex-wrap: wrap;
   border-bottom: solid 1px grey;
   padding-bottom: 10px;
-}
-.frame{
-  width: 300px;
-  height: 350px;
-  font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    position: relative;
-    padding: 25px;
-    background: #57bdcb
-}
-.frame img{
-  margin: 10px 0px 0px 100px;
-  height: 100px!important;
-  width: 100px!important;
 }
 .search-section .search-wrapper .search-history {
   position: relative;
@@ -1507,7 +1439,6 @@ article.full-width .content {
   .search-section .search-wrapper .search-input-wrapper input {
     width: 85%;
     margin: auto;
-    font-size: 16px;
   }
   .tag-section .tag-wrapper {
     padding: 0;
@@ -1680,7 +1611,7 @@ body.overlaying .overlay {
 }
 @media screen and (max-width: 950px) {
   .landing-page h1 {
-    font-size: 5px;
+    font-size: 45px;
   }
   .info-div h3.desktop-h3 {
     font-size: 40px;
@@ -1688,7 +1619,7 @@ body.overlaying .overlay {
 }
 @media screen and (max-width: 700px) {
   .landing-page h1 {
-    font-size: 35px;
+    font-size: 60px;
   }
   .landing-page .info-div h3.mobile-h3 {
     display: block;
@@ -1760,17 +1691,10 @@ body.overlaying .overlay {
   color: #fff;
   padding: 150px 0;
 }
-@media(max-width: 400px){
-  .landing-stage.statement {
-  background: #57bdcb;
-  color: #fff;
-  padding: 0px;
-}
-}
 .landing-stage.statement .wrapper {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 150px;
 }
 .landing-stage.statement .wrapper > h2 {
   display: block;
@@ -1791,16 +1715,7 @@ body.overlaying .overlay {
 .landing-stage.statement .wrapper > div > p {
   display: block;
   font-size: 28px;
-  /*font-style: italic;*/
-  line-height: 2em;
-}
-@media(max-width: 700px){
-  .landing-stage.statement .wrapper > div > p {
-  display: block;
-  font-size: 28px;
-  /*font-style: italic;*/
-  line-height: 1.5em;
-}
+  font-style: italic;
 }
 .landing-stage.statement .wrapper > div > .landing-icons {
   display: -webkit-flex;
@@ -1810,25 +1725,13 @@ body.overlaying .overlay {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 20px;
 }
 .landing-stage.statement .wrapper > div > .landing-icons figure > img {
   display: block;
-  height: 172px;
-
-}
-@media(max-width: 700px){
-  .landing-stage.statement .wrapper > div > .landing-icons figure > img {
-  display: block;
-  height: 152px;
-
-}
 }
 .landing-stage.statement .wrapper > div > .landing-icons figure figcaption {
   text-align: center;
-  font-size: x-large;
 }
-
 .landing-stage.statement .wrapper > .clear {
   display: block;
   clear: both;
@@ -2306,7 +2209,7 @@ body.overlaying .overlay {
     margin: 0 auto;
   }
   .landing-stage.statement .wrapper > div > .landing-icons figure figcaption {
-    font-size: 28px;
+    font-size: 16px;
   }
   .landing-stage.statement .wrapper > img {
     float: none;
@@ -2754,9 +2657,6 @@ article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-set
   width: 850px;
   margin-bottom: 50px;
 }
-.padded-conts{
-  padding-bottom: 60px;
-}
 article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main,
 article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main,
 article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main,
@@ -2826,7 +2726,7 @@ article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-set
 article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-title-2 {
   color: black;
   margin-bottom: 16px;
-  font-size: 28px;
+  font-size: 20px;
 }
 article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control,
 article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control,
@@ -3010,30 +2910,9 @@ article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stag
 article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p {
   display: block;
   position: relative;
-  font-size: 28px;
+  font-size: 25px;
   line-height: 2em;
-  margin: 100px 0 0;
-}
-@media(max-width: 700px){
- 
-  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p,
-article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p,
-article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p,
-article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p,
-article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p,
-article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p,
-article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p,
-article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p,
-article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p,
-article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p,
-article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p,
-article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p {
-  display: block;
-  position: relative;
-  font-size: 25px!important;
-  line-height: 1.5em!important;
-  margin: 10px 0 0!important;
-}
+  margin: 20px 0 0;
 }
 article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p span.about-span,
 article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p span.about-span,
@@ -3083,11 +2962,10 @@ article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .st
 article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-paragraph,
 article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-paragraph {
   display: block;
-  /*position: relative;*/
-  font-size: 28px;
+  position: relative;
+  font-size: 25px;
   line-height: 2em;
   margin: 50px 0 0;
-  text-align: center!important;
 }
 article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
 article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
@@ -3097,14 +2975,6 @@ article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stag
   font-size: 32px;
   font-weight: 900;
   text-align: center;
-}
-article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
-article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
-article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
-article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title p{
-  text-align: center!important;
-  margin: 10px 0 0!important;
-}
 }
 article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn,
 article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn,
@@ -3191,7 +3061,7 @@ article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .sta
   position: relative;
   width: 60%;
   height: auto;
-  margin-bottom: 0px;
+  margin-bottom: 150px;
 }
 article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content.center,
 article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content.center,
@@ -3221,9 +3091,9 @@ article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .sta
 article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p {
   display: block;
   position: relative;
-  font-size: 28px;
+  font-size: 25px;
   line-height: 2em;
-  margin: 0px;
+  margin: 20px 0 0;
 }
 article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p span.about-span,
 article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p span.about-span,
@@ -3330,8 +3200,8 @@ article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .sta
 article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph {
   display: block;
   position: relative;
-  font-size: 28px;
-  /*line-height: 2em;*/
+  font-size: 25px;
+  line-height: 2em;
   margin: 50px 0 0;
 }
 article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
@@ -3442,14 +3312,6 @@ article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage.stage
 article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage.stage2 {
   margin-bottom: 180px;
 }
-@media(max-width: 700px){
-  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage.stage2,
-article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage.stage2,
-article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage.stage2,
-article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage.stage2 {
-  margin-bottom: 0px;
-}
-}
 article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
 article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
 article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
@@ -3466,13 +3328,9 @@ article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3
 article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details {
   padding-bottom: 50px;
 }
-@media (max-width: 700px){
-article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details {
-  padding-top: 80px;
-}}
 article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details .details-title-1,
 article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details .details-title-2 {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4 {
   display: none;
@@ -3638,7 +3496,7 @@ article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4
   article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content,
   article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content {
     width: 80%;
-    margin-top: 150px;
+    margin: 80px auto;
   }
   article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
   article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
